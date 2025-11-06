@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS kv_table (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+);
+INSERT INTO kv_table VALUES ('hello', 'world') ON CONFLICT DO NOTHING;
+INSERT INTO kv_table VALUES ('foo', 'bar') ON CONFLICT DO NOTHING;
+INSERT INTO kv_table VALUES ('temp1', 'temp2') ON CONFLICT DO NOTHING;
